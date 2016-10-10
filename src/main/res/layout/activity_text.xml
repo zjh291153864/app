@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:xqshijie="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <com.zhonghong.xqshijie.widget.TitleView
+        android:id="@id/title"
+        style="@style/title"
+        xqshijie:centerValue="@string/title_ylt"
+        xqshijie:rightImageSrc="@drawable/ic_share" />
+
+    <LinearLayout
+        android:id="@+id/ll_themeparks_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.zhonghong.xqshijie.widget.ImageIncludeTextView
+                    android:id="@+id/imtv_themeparks1"
+                    android:layout_width="113dp"
+                    android:layout_height="77dp"
+                    xqshijie:imageIncludeSrc="@color/themeparks1_bg_color"
+                    xqshijie:textIncludeColor="@color/themeparks1_text_color"
+                    xqshijie:textIncludeValue = "test"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.zhonghong.xqshijie.widget.ImageIncludeTextView
+                    android:id="@+id/imtv_themeparks2"
+                    android:layout_width="113dp"
+                    android:layout_height="77dp"
+                    xqshijie:imageIncludeSrc="@color/themeparks2_bg_color"
+                    xqshijie:textIncludeColor="@color/themeparks2_text_color"
+                    xqshijie:textIncludeValue = "test"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.zhonghong.xqshijie.widget.ImageIncludeTextView
+                    android:id="@+id/imtv_themeparks3"
+                    android:layout_width="113dp"
+                    android:layout_height="77dp"
+                    xqshijie:imageIncludeSrc="@color/themeparks3_bg_color"
+                    xqshijie:textIncludeColor="@color/themeparks3_text_color"
+                    xqshijie:textIncludeValue = "test"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.zhonghong.xqshijie.widget.ImageIncludeTextView
+                    android:id="@+id/imtv_themeparks4"
+                    android:layout_width="170dp"
+                    android:layout_height="90dp"
+                    xqshijie:imageIncludeSrc="@color/themeparks4_bg_color"
+                    xqshijie:textIncludeColor="@color/themeparks4_text_color"
+                    xqshijie:textIncludeValue = "test"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.zhonghong.xqshijie.widget.ImageIncludeTextView
+                    android:id="@+id/imtv_themeparks5"
+                    android:layout_width="170dp"
+                    android:layout_height="90dp"
+                    xqshijie:imageIncludeSrc="@color/themeparks5_bg_color"
+                    xqshijie:textIncludeValue = "test"
+                    xqshijie:textIncludeColor="@color/themeparks5_text_color"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+

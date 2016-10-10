@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_dialog_activity"
+    tools:context="com.zhonghong.xqshijie.appupdate.UpdateAppDialogActivity">
+
+    <TextView
+        android:id="@+id/tv_update_app_title"
+        android:layout_width="match_parent"
+        android:padding="@dimen/padding_10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="2dp"
+        android:gravity="center"
+        android:text="@string/dialog_updte_tile"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_17sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_update_app_title"
+        android:background="@drawable/shape_dialog_line_activity" />
+
+    <TextView
+        android:id="@+id/tv_update_app_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_update_app_title"
+        android:padding="@dimen/padding_20dp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_update_app_content"
+        android:background="@drawable/shape_dialog_line_activity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_update_app_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_update_app_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btn_update_app_ok"
+            android:layout_marginRight="@dimen/margin_20dp"
+            android:layout_toLeftOf="@+id/btn_update_app_ok"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:padding="@dimen/padding_10dp"
+            android:text="@string/btn_cancel_sting"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <View
+            android:id="@+id/view_update"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_update_app_content"
+            android:background="@drawable/shape_dialog_line_activity" />
+
+        <Button
+            android:id="@+id/btn_update_app_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:padding="@dimen/padding_10dp"
+            android:text="@string/btn_ok_sting"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_16sp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_shadow_width">15dp</dimen>
+    <dimen name="text_size_10sp">10sp</dimen>
+    <dimen name="text_size_11sp">11sp</dimen>
+    <dimen name="text_size_12sp">12sp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+    <dimen name="text_size_15sp">15sp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="text_size_17sp">17sp</dimen>
+    <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_19sp">19sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="padding_12dp">12dp</dimen>
+    <integer name="num_cols">1</integer>
+    <!--导航页相关-->
+    <dimen name="guide_btn_margin_bottom">68dp</dimen>
+    <dimen name="guide_btn_padding_left">35dp</dimen>
+    <dimen name="guide_btn_padding_top">10dp</dimen>
+    <dimen name="guide_btn_text_size">18px</dimen>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+    <dimen name="default_circle_dot_interval">0dp</dimen>
+    <!--通知栏软件下载-->
+    <dimen name="left_margin">10dp</dimen>
+    <dimen name="total_padding">5dp</dimen>
+    <dimen name="image_wh">50dp</dimen>
+    <dimen name="progress_bar_top">4dp</dimen>
+    <dimen name="text_view_margin_bottom">6dp</dimen>
+    <dimen name="text_view_margin_Left">15dp</dimen>
+    <dimen name="text_view_margin_top">5dp</dimen>
+    <!--软件更新提示框-->
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_17dp">17dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="padding_20dp">20dp</dimen>
+
+</resources>

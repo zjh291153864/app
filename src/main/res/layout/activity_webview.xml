@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xqshijie="http://schemas.android.com/apk/res-auto"
+    style="@style/ActivityLinearLayout">
+    <!-- 标题栏 -->
+    <com.zhonghong.xqshijie.widget.TitleView
+        android:id="@id/title"
+        style="@style/title"
+        xqshijie:leftImageSrc="@drawable/ic_return"
+         />
+
+    <ProgressBar
+        android:id="@+id/pbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="4dip"
+        android:max="100"
+        android:progress="0" />
+    <!-- webview -->
+    <com.zhonghong.xqshijie.widget.WebViewUI
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

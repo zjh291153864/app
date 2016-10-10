@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xqshijie="http://schemas.android.com/apk/res-auto"
+    style="@style/ActivityLinearLayout">
+
+    <!-- 标题栏 -->
+    <com.zhonghong.xqshijie.widget.TitleBigView
+        android:id="@id/title"
+        style="@style/title"
+        xqshijie:centerValue="@string/title_home_page"
+        xqshijie:leftImageBigSrc="@drawable/left_title_logo" />
+
+    <com.jingchen.pulltorefresh.parent.ParentFrameLayout
+        android:id="@+id/parent_homepage_outside"
+        android:layout_width="match_parent"
+        android:layout_below="@id/title"
+        android:layout_height="match_parent">
+
+        <com.jingchen.pulltorefresh.PullToRefreshLayout
+            android:id="@+id/ptr_homepage_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <com.jingchen.pulltorefresh.pullableview.PullableScrollView
+                android:id="@+id/scv_homepage_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:fadingEdge="none"
+                android:fillViewport="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <com.zhonghong.xqshijie.widget.adcircleviewpager.ImageCycleView
+                        android:id="@+id/icv_banner_cycleView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.zhonghong.xqshijie.widget.CategoryTitleView
+                        android:id="@+id/cv_hotpoject_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xqshijie:text="@string/hot_project" />
+
+                    <ListView
+                        android:id="@+id/lv_hotpoject_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cv_hotpoject_title"
+                        android:cacheColorHint="#00000000"
+                        android:divider="#ffffff"
+                        android:dividerHeight="12dp"
+                        android:listSelector="#00000000"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:scrollbars="none" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/default_rectangle_color" />
+
+                    <com.zhonghong.xqshijie.widget.CategoryTitleView
+                        android:id="@+id/cv_moreaddr_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xqshijie:text="@string/more_address" />
+
+
+                    <com.zhonghong.xqshijie.widget.HorizontalScrollCustomView
+                        android:id="@+id/hscrollv_home_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cv_moreaddr_title"
+                        android:layout_gravity="bottom"
+                        android:background="@android:color/white"
+                        android:paddingLeft="@dimen/padding_12dp"
+                        android:paddingRight="@dimen/padding_12dp"
+                        android:paddingTop="5dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:id="@+id/ll_hscrollv_gallery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal"></LinearLayout>
+                    </com.zhonghong.xqshijie.widget.HorizontalScrollCustomView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/default_rectangle_color" />
+
+                    <com.zhonghong.xqshijie.widget.CategoryTitleView
+                        android:id="@+id/cv_ylt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xqshijie:text="@string/main_ylt_title" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_ylt_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cv_ylt_title"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                xqshijie:imageSrc="@drawable/ic_ylt_fix1"
+                                xqshijie:textValue="@string/know_ylt_fix1" />
+
+                            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                xqshijie:imageSrc="@drawable/ic_ylt_fix2"
+                                xqshijie:textValue="@string/know_ylt_fix2" />
+
+                            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                xqshijie:imageSrc="@drawable/ic_ylt_fix3"
+                                xqshijie:textValue="@string/know_ylt_fix3" />
+
+                            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                xqshijie:imageSrc="@drawable/ic_ylt_fix4"
+                                xqshijie:textValue="@string/know_ylt_fix4" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_know_ylt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="20dp"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="onClick">
+
+                            <TextView
+                                android:layout_width="140dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/common_btn_empty_tintblue"
+                                android:gravity="center"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/know_ylt_sring"
+                                android:textColor="@color/ylt_text_color"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/default_rectangle_color" />
+
+                    <com.zhonghong.xqshijie.widget.CategoryTitleView
+                        android:id="@+id/cv_themeparks_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xqshijie:text="@string/themeparks_title" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_themeparks_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cv_themeparks_title"
+                        android:orientation="vertical"
+                        android:paddingBottom="12dp"
+                        android:paddingLeft="9dp"
+                        android:paddingRight="9dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <com.zhonghong.xqshijie.widget.ImageIncludeTextView
+                                    android:id="@+id/imtv_themeparks1"
+                                    android:layout_width="113dp"
+                                    android:layout_height="77dp"
+                                    xqshijie:imageIncludeSrc="@color/themeparks1_bg_color"
+                                    xqshijie:textIncludeColor="@color/themeparks1_text_color" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <com.zhonghong.xqshijie.widget.ImageIncludeTextView
+                                    android:id="@+id/imtv_themeparks2"
+                                    android:layout_width="113dp"
+                                    android:layout_height="77dp"
+                                    xqshijie:imageIncludeSrc="@color/themeparks2_bg_color"
+                                    xqshijie:textIncludeColor="@color/themeparks2_text_color" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <com.zhonghong.xqshijie.widget.ImageIncludeTextView
+                                    android:id="@+id/imtv_themeparks3"
+                                    android:layout_width="113dp"
+                                    android:layout_height="77dp"
+                                    xqshijie:imageIncludeSrc="@color/themeparks3_bg_color"
+                                    xqshijie:textIncludeColor="@color/themeparks3_text_color" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <com.zhonghong.xqshijie.widget.ImageIncludeTextView
+                                    android:id="@+id/imtv_themeparks4"
+                                    android:layout_width="170dp"
+                                    android:layout_height="90dp"
+                                    xqshijie:imageIncludeSrc="@color/themeparks4_bg_color"
+                                    xqshijie:textIncludeColor="@color/themeparks4_text_color" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <com.zhonghong.xqshijie.widget.ImageIncludeTextView
+                                    android:id="@+id/imtv_themeparks5"
+                                    android:layout_width="170dp"
+                                    android:layout_height="90dp"
+                                    xqshijie:imageIncludeSrc="@color/themeparks5_bg_color"
+                                    xqshijie:textIncludeColor="@color/themeparks5_text_color" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/default_rectangle_color" />
+
+                    <com.zhonghong.xqshijie.widget.CategoryTitleView
+                        android:id="@+id/cv_informations_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xqshijie:text="@string/informations_title" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_informations_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cv_informations_title"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_hot_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp">
+
+                            <ImageView
+                                android:id="@+id/iv_hot_image"
+                                android:layout_width="90dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/image_onloading_homeinfo"
+                                android:scaleType="fitXY" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_hot_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:lines="2"
+                                    android:textColor="@color/title_text_color"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_hot_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_below="@id/tv_hot_title"
+                                    android:layout_marginTop="9dp"
+                                    android:textColor="@color/province_line_border"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_informations_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="20dp"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="onClick">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/common_btn_empty_tintblue"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/informations_all_sring"
+                                android:textColor="@color/ylt_text_color"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/default_rectangle_color" />
+
+                    <com.zhonghong.xqshijie.widget.CategoryTitleView
+                        android:id="@+id/cv_safe_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        xqshijie:text="@string/safe_title" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cv_safe_title"
+                        android:layout_marginBottom="28dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                xqshijie:imageSrc="@drawable/safe_guard"
+                                xqshijie:textValue="@string/safe_guard_string" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="40dp"
+                                xqshijie:imageSrc="@drawable/safe_pay"
+                                xqshijie:textValue="@string/safe_pay_string" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.jingchen.pulltorefresh.pullableview.PullableScrollView>
+
+            <include layout="@layout/load_more" />
+
+        </com.jingchen.pulltorefresh.PullToRefreshLayout>
+
+    </com.jingchen.pulltorefresh.parent.ParentFrameLayout>
+
+</RelativeLayout>

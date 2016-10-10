@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xqshijie="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_down_page"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mc_blank_page_color"
+    android:orientation="vertical">
+    <!--android:layout_marginBottom="15dp"-->
+
+    <FrameLayout
+        android:id="@+id/fl_video_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/black">
+
+        <com.universalvideoview.UniversalVideoView
+            android:id="@+id/uvv_videoView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            xqshijie:uvv_autoRotation="true"
+            android:visibility="gone"
+            xqshijie:uvv_fitXY="true" />
+
+        <com.universalvideoview.UniversalMediaController
+            android:id="@+id/umc_media_controller"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            xqshijie:uvv_scalable="true" />
+
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/iv_video_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/start_play"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_video_below"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="18dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="18dp"
+            android:text="逸乐通"
+            android:textColor="@color/defuat_text_black_color"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_prodetail_yltlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="18dp">
+
+
+            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                xqshijie:imageSrc="@drawable/ic_ylt_fix1"
+                xqshijie:textValue="@string/know_ylt_fix1" />
+
+            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                xqshijie:imageSrc="@drawable/ic_ylt_fix2"
+                xqshijie:textValue="@string/know_ylt_fix2" />
+
+            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                xqshijie:imageSrc="@drawable/ic_ylt_fix3"
+                xqshijie:textValue="@string/know_ylt_fix3" />
+
+            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                xqshijie:imageSrc="@drawable/ic_ylt_fix4"
+                xqshijie:textValue="@string/know_ylt_fix4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_desc_header"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/mc_blank_page_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="34dp"
+                android:gravity="center_vertical"
+                android:text="类型"
+                android:textColor="@color/defuat_text_black_color"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="104dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="面积"
+                android:textColor="@color/defuat_text_black_color"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="价格"
+                android:textColor="@color/defuat_text_black_color"
+                android:textSize="@dimen/text_size_small" />
+
+        </LinearLayout>
+
+        <com.zhonghong.xqshijie.widget.ListViewForScrollView
+            android:id="@+id/lv_ylt_project_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/bgColor_divier" />
+    </LinearLayout>
+</LinearLayout>

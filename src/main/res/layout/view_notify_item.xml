@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/left_margin"
+    android:background="@color/transparent"
+    android:orientation="horizontal"
+    android:padding="@dimen/total_padding" >
+    <ImageView
+        android:id="@+id/notify_icon_iv"
+        android:layout_width="@dimen/image_wh"
+        android:layout_height="@dimen/image_wh"
+        android:src="@drawable/ic_launcher" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_height="@dimen/image_wh">
+        <TextView
+            android:id="@+id/notify_updata_values_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_view_margin_top"
+            android:gravity="center_vertical"
+            android:text="@string/down_app_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12sp" />
+        <TextView
+            android:id="@+id/notify_updata_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_11sp"
+            android:layout_alignLeft="@+id/notify_updata_values_tv"
+            android:layout_below="@+id/notify_updata_values_tv"
+            android:layout_marginTop="@dimen/margin_3dp"
+            />
+        <ProgressBar
+            android:id="@+id/notify_updata_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/notify_updata_state"
+            android:layout_marginTop="@dimen/progress_bar_top"
+            android:layout_marginBottom="@dimen/margin_3dp"
+            android:max="100"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

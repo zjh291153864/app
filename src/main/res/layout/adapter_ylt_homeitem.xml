@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/iv_ylthomepage_leftimg"
+        android:layout_width="128dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_ylt_productdefault" />
+
+    <TextView
+        android:id="@+id/tv_ylthomepage_itemname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_ylthomepage_leftimg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@id/iv_ylthomepage_leftimg"
+        android:text="浙江·某楼盘"
+        android:textColor="@color/defuat_text_color"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_ylthomepage_itemprivce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_ylthomepage_leftimg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="9dp"
+        android:layout_toRightOf="@id/iv_ylthomepage_leftimg"
+        android:text="¥ 78,000-98,000"
+        android:textColor="@color/orange_light"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xqshijie="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ActivityLinearLayout">
+
+    <!-- 标题栏 -->
+    <com.zhonghong.xqshijie.widget.TitleView
+        android:id="@id/title"
+        style="@style/title"
+        xqshijie:centerValue="@string/app_name" />
+    <FrameLayout
+        android:id="@+id/main_fl"
+        android:layout_width="fill_parent"
+        android:layout_height="172dip">
+
+        <com.zhonghong.xqshijie.widget.adviewflow.ViewFlow
+            android:id="@+id/main_viewflow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:padding="1dip">
+
+            <com.zhonghong.xqshijie.widget.adviewflow.CircleFlowIndicator
+                android:id="@+id/main_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:padding="4dip"
+                app:activeColor="@color/circleflowindicator_activecolor"
+                app:activeType="fill"
+                app:circleSeparation="15dp"
+                app:inactiveColor="@color/circleflowindicator_inactivecolor"
+                app:inactiveType="fill"
+                app:radius="4dip"
+                />
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+</RelativeLayout>

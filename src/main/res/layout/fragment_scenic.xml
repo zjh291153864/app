@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xqshijie="http://schemas.android.com/apk/res-auto"
+    style="@style/ActivityLinearLayout">
+
+    <!-- 标题栏 -->
+    <com.zhonghong.xqshijie.widget.TitleBigView
+        android:id="@id/title"
+        style="@style/title"
+        xqshijie:centerValue="@string/app_name"
+        xqshijie:leftImageBigSrc="@drawable/left_title_logo" />
+
+    <com.zhonghong.xqshijie.widget.TitleView
+        android:id="@+id/title2"
+        style="@style/title"
+        android:visibility="gone"
+        xqshijie:centerValue="@string/app_name"
+        xqshijie:leftImageSrc="@drawable/ic_return" />
+
+    <com.jingchen.pulltorefresh.parent.ParentFrameLayout
+        android:id="@+id/exp_scenic_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jingchen.pulltorefresh.PullToRefreshLayout
+            android:id="@+id/ptr_scenichomepage_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <com.jingchen.pulltorefresh.pullableview.PullableScrollView
+                android:id="@+id/scv_scenichomepage_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:fadingEdge="none"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:scrollbars="none">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <com.zhonghong.xqshijie.widget.adcircleviewpager.ImageCycleView
+                        android:id="@+id/icv_banner_cycleView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ListView
+                        android:id="@+id/lv_scnichome_productlist"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/icv_banner_cycleView"
+                        android:layout_marginTop="10dp"
+                        android:cacheColorHint="#00000000"
+                        android:divider="#ffffff"
+                        android:dividerHeight="10dp"
+                        android:listSelector="#00000000"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:scrollbars="none" />
+                </LinearLayout>
+
+            </com.jingchen.pulltorefresh.pullableview.PullableScrollView>
+
+            <include layout="@layout/load_more" />
+        </com.jingchen.pulltorefresh.PullToRefreshLayout>
+
+
+    </com.jingchen.pulltorefresh.parent.ParentFrameLayout>
+
+
+</LinearLayout>

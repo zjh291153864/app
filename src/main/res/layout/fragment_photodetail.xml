@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xqshijie="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhonghong.xqshijie.widget.TitleView
+        android:id="@+id/detail_title"
+        style="@style/title"
+        xqshijie:bg="@color/black"
+        xqshijie:centerValue="1/72"
+        xqshijie:leftImageSrc="@drawable/ic_return"
+        xqshijie:rightImageSrc="@drawable/photo_to_total" />
+
+    <RelativeLayout
+        android:id="@+id/rl_photo_downpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <com.zhonghong.xqshijie.widget.PhotoViewPager
+            android:id="@+id/vp_photocontain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/photo_any_infos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:text="1/30 浙江·某某项目"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_photo_neterror"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/photoneterror"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:xqshijie="http://schemas.android.com/apk/res-auto"
+    android:background="@color/mc_blank_page_color"
+    android:orientation="vertical">
+    <com.zhonghong.xqshijie.widget.TitleView
+        android:id="@id/title"
+        style="@style/title"
+        xqshijie:leftImageSrc="@drawable/ic_return"
+        xqshijie:centerValue="@string/address_list" />
+    <ListView
+        android:id="@+id/ptrlv_addresslist_list"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@color/white"/>
+    <Button
+        android:id="@+id/btn_addresslist_new"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:text="@string/new_address"
+        android:textSize="17sp"
+        android:onClick="onClick"
+        android:background="@color/mc_next_btn_color"
+        android:textColor="@color/white"/>
+</LinearLayout>

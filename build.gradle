@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        xqshijiekey {
+            keyAlias 'xqshijiekey'
+            keyPassword '00097979'
+            storeFile file("${rootDir}/" + (String) rootProject.properties['KEY_STORE_FILE'])
+            storePassword '00097979'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+    defaultConfig {
+        multiDexEnabled = true
+        applicationId "com.zhonghong.xqshijie"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        signingConfig signingConfigs.xqshijiekey
+    }
+    dexOptions {
+        javaMaxHeapSize "8g"
+        preDexLibraries = false
+    }
+    buildTypes {
+        release {
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.xqshijiekey
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为XXXX_v1.0_2016-01-15_wandoujia.apk 
+                        def fileName = "xqshijie_${variant.productFlavors[0].name}_v${defaultConfig.versionName}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+        debug {
+            signingConfig signingConfigs.xqshijiekey
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    productFlavors {
+        xqshijie {}
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/glide-3.6.1.jar')
+    compile project(':pulltorefreshlibrary')
+    compile project(':libshare')
+    compile project(':librefreshlayout')
+    compile project(':sliding_menu')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/imageloder.jar')
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.bigkoo:alertview:1.0.2'
+    compile 'org.xutils:xutils:3.1.14'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.github.chrisbanes:PhotoView:1.2.6'
+    compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/fastjson-1.2.5.jar')
+    compile 'com.android.support:recyclerview-v7:23.0.0'
+    compile project(':libmapandloc')
+    compile project(':universalvideoview')
+    compile files('libs/alipaySdk-20160516.jar')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+}

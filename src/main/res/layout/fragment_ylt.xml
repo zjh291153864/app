@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xqshijie="http://schemas.android.com/apk/res-auto"
+    style="@style/ActivityLinearLayout"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <com.zhonghong.xqshijie.widget.TitleBigView
+        android:id="@id/title"
+        style="@style/title"
+        xqshijie:centerValue="@string/app_name"
+        xqshijie:leftImageBigSrc="@drawable/left_title_logo"
+        xqshijie:rightImageBigSrc="@drawable/ic_share" />
+
+    <com.zhonghong.xqshijie.widget.TitleView
+        android:id="@+id/title2"
+        style="@style/title"
+        android:visibility="gone"
+        xqshijie:centerValue="@string/app_name"
+        xqshijie:leftImageSrc="@drawable/ic_return"
+        xqshijie:rightImageSrc="@drawable/ic_share" />
+
+    <com.jingchen.pulltorefresh.parent.ParentFrameLayout
+        android:id="@+id/parent_ylt_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jingchen.pulltorefresh.PullToRefreshLayout
+            android:id="@+id/ptr_ylthome_refreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <com.jingchen.pulltorefresh.pullableview.PullableScrollView
+                android:id="@+id/scv_ylthomepage_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:fadingEdge="none"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <com.zhonghong.xqshijie.widget.adcircleviewpager.ImageCycleView
+                        android:id="@+id/icv_banner_cycleView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_ylt_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                xqshijie:imageSrc="@drawable/ic_ylt_fix1"
+                                xqshijie:textValue="@string/know_ylt_fix1" />
+
+                            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                xqshijie:imageSrc="@drawable/ic_ylt_fix2"
+                                xqshijie:textValue="@string/know_ylt_fix2" />
+
+                            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                xqshijie:imageSrc="@drawable/ic_ylt_fix3"
+                                xqshijie:textValue="@string/know_ylt_fix3" />
+
+                            <com.zhonghong.xqshijie.widget.ImageAndTextVerticalView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                xqshijie:imageSrc="@drawable/ic_ylt_fix4"
+                                xqshijie:textValue="@string/know_ylt_fix4" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/default_rectangle_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/use_teach"
+                        android:textColor="@color/menu_text_color"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ylt_home_useprocess"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_processes_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ylt_pic_user_flow" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/default_rectangle_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/ylg_product"
+                        android:textColor="@color/menu_text_color"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/lv_ylthome_productlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:cacheColorHint="@android:color/transparent"
+                            android:divider="@color/mc_page_boundary_color"
+                            android:dividerHeight="1sp"
+                            android:listSelector="@android:color/transparent" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </com.jingchen.pulltorefresh.pullableview.PullableScrollView>
+
+            <include layout="@layout/load_more" />
+        </com.jingchen.pulltorefresh.PullToRefreshLayout>
+
+    </com.jingchen.pulltorefresh.parent.ParentFrameLayout>
+
+
+</LinearLayout>

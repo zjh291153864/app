@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="red">#900</color>
+    <color name="green">#090</color>
+    <color name="blue">#009</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="title_text_color">#5a5a5a</color><!--标题字体颜色-->
+    <color name="menu_text_color">#2a2a2a</color><!--菜单字体颜色-->
+    <color name="text_color">#2A2A2A</color><!--深色文字颜色-->
+    <color name="text_mr_ms_color">#878787</color><!--个人资料中先生女士颜色-->
+    <color name="viewflow_foreground_color">#203144ff</color> <!-- 广告轮播器上面的半透明罩子的颜色 -->
+    <color name="circleflowindicator_activecolor">#333447</color> <!-- 广告轮播器指示点 选中的颜色 -->
+    <color name="circleflowindicator_inactivecolor">#A0333447</color> <!-- 广告轮播器指示点 未选中的颜色 -->
+    <color name="lv_click_color">#77AAAAAA</color>
+    <color name="mc_title_dividing_line_color">#D2D2D2</color><!--标题分界线颜色-->
+    <color name="mc_page_boundary_color">#E0E0E0</color><!--页面分界线颜色-->
+    <color name="mc_blank_page_color">#F3F3F3</color><!--页面空白处颜色-->
+    <color name="mc_next_btn_color">#FF1BB2CD</color><!--蓝色，注册登陆下一步按钮颜色-->
+    <color name="mc_codes_btn_color">#191BB2CD</color>
+    <color name="orange_light">#FF9712</color>
+    <color name="mc_boundary_color">#FF9130</color>
+    <color name="bule_light">#3388b4</color>
+    <color name="gery_light">#cdd9df</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="province_line_border">#b1b1b1</color><!--联系地址弹出框分界线-->
+    <color name="homepage_category_color">#2a2a2a</color><!--首页栏目字颜色-->
+    <color name="homepage_fix_color">#878787</color><!--首页固定内容字颜色-->
+    <color name="homepage_address_color">#2a2a2a</color><!--地址字颜色-->
+    <color name="default_image_color">#d2d2d2</color>
+    <color name="money_text_color">#FF9712</color><!--默认图颜色-->
+    <color name="orange_transparent_50">#7fFF9712</color><!--默认图颜色-->
+
+    <color name="default_rectangle_color">#f3f3f3</color><!--首页矩形分割线颜色-->
+
+    <color name="color_transparent">#00000000</color>
+    <color name="defuat_orange">#ff9712</color>
+    <color name="defuat_text_grey_color">#b1b1b1</color>
+    <color name="defuat_text_color">#5a5a5a</color>
+    <color name="defuat_text_black_color">#2a2a2a</color>
+    <!--导航页相关-->
+    <color name="indicator_color">#FF33B5E5</color>
+    <color name="default_circle_indicator_stroke_color">#00000000</color>
+    <color name="default_circle_indicator_fill_color">#FFF00F</color>
+    <color name="default_circle_indicator_page_color">#88ffffff</color>
+    <color name="ring_pie_chart_all">#F47319</color>
+    <color name="text_blue">#1bb2cd</color><!--阅读更多按钮颜色-->
+    <color name="label_bg">#e8f7fa</color><!--标签背景-->
+    <color name="bg_count">#7f000000</color>
+    <color name="ylt_text_color">#1bb2cd</color>//了解逸乐通字体颜色
+    <color name="themeparks1_bg_color">#19ef5ba1</color>//主题乐园背景颜色
+    <color name="themeparks2_bg_color">#190066b3</color>//主题乐园背景颜色
+    <color name="themeparks3_bg_color">#1904831c</color>//主题乐园背景颜色
+    <color name="themeparks4_bg_color">#19e48204</color>//主题乐园背景颜色
+    <color name="themeparks5_bg_color">#191bb2cd</color>//主题乐园背景颜色
+
+    <color name="themeparks1_text_color">#ef5ba1</color>//主题乐园字体颜色
+    <color name="themeparks2_text_color">#0066b3</color>//主题乐园字体颜色
+    <color name="themeparks3_text_color">#04831c</color>//主题乐园字体颜色
+    <color name="themeparks4_text_color">#e48204</color>//主题乐园字体颜色
+    <color name="themeparks5_text_color">#1bb2cd</color>//主题乐园字体颜色
+
+
+</resources>

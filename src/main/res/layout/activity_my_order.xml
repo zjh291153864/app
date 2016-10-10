@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xqshijie="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- 标题栏 -->
+    <com.zhonghong.xqshijie.widget.TitleView
+        android:id="@id/title"
+        style="@style/title"
+        android:background="@color/white"
+        xqshijie:centerValue="@string/mc_my_order"
+        xqshijie:leftImageSrc="@drawable/ic_return" />
+
+    <com.jingchen.pulltorefresh.parent.ParentFrameLayout
+        android:id="@+id/parent_my_order_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title">
+
+        <com.jingchen.pulltorefresh.PullToRefreshLayout
+            android:id="@+id/ptr_my_order_refreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_head" />
+
+            <com.jingchen.pulltorefresh.pullableview.PullableScrollView
+                android:id="@+id/scv_ylthomepage_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ListView
+                            android:id="@+id/lv_my_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/title"
+                            android:cacheColorHint="@android:color/transparent"
+                            android:divider="@color/bgColor_divier"
+                            android:dividerHeight="10dp"
+                            android:fadingEdge="none" />
+                    </LinearLayout>
+
+                    <com.jingchen.pulltorefresh.widget.NetStateByNetNoNetLayout
+                        android:id="@+id/netstate_nonet_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </com.jingchen.pulltorefresh.pullableview.PullableScrollView>
+
+            <include layout="@layout/load_more" />
+        </com.jingchen.pulltorefresh.PullToRefreshLayout>
+    </com.jingchen.pulltorefresh.parent.ParentFrameLayout>
+</RelativeLayout>

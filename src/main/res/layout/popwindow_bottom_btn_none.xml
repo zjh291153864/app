@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popwindow_btn_none_"
+    android:gravity="center"
+    android:padding="25dp"
+    android:text="@string/btn_cancel_sting"
+    android:textColor="@color/homepage_fix_color"
+    android:textSize="15sp" />

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <item type="id" name="topLayout"/>
+    <item type="id" name="viewpager" />
+    <item type="id" name="menu_home_page_v" />
+    <item type="id" name="menu_scenic_v" />
+    <item type="id" name="menu_ylt_v" />
+    <item type="id" name="menu_member_center_v" />
+    <item type="id" name="menu_newcomer_v" />
+    <item type="id" name="menu_conn_v" />
+</resources>

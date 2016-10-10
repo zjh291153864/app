@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ad_rl"
+    android:layout_width="match_parent"
+    android:layout_height="180dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <ImageView
+            android:id="@+id/iv_adcycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_onloading_homebig" />
+        <TextView
+            android:id="@+id/tv_adcycle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="60dp"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tv_adcycle_value"
+            android:layout_below="@+id/tv_adcycle_title"
+            android:layout_marginTop="20dp"
+            android:layout_alignLeft="@+id/tv_adcycle_title"
+            android:layout_marginLeft="30dp"
+            android:textSize="@dimen/text_size_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_pic_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="8dp"
+        android:background="@color/bg_count"
+        android:gravity="center"
+        android:minWidth="40dp"
+        android:padding="6dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14sp"
+        android:visibility="gone"/>
+
+</FrameLayout>

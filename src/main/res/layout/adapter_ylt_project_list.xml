@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_house_type"
+        android:layout_width="133dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="34dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:maxEms="8"
+        android:text="A11-50"
+        android:textColor="@color/text_mr_ms_color" />
+
+    <TextView
+        android:id="@+id/tv_house_area"
+        android:layout_width="107dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="50m²"
+        android:textColor="@color/text_mr_ms_color" />
+
+    <TextView
+        android:id="@+id/tv_house_price"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="¥78,000"
+        android:textColor="@color/text_mr_ms_color" />
+</LinearLayout>

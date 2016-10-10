@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="download_contract">
+        <item>1 《分权单元房委托管理合同》</item>
+        <item>2 《分权单元房委托管理合同》相关名词及定义</item>
+        <item>3 《分权单元房使用及管理规则》</item>
+        <item>4 《房屋买卖意向书》</item>
+        <item>5 《授权委托书》</item>
+        <item>6 《承诺函》</item>
+    </string-array>
+</resources>
