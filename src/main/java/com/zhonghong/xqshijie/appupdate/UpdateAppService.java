@@ -193,6 +193,7 @@ public class UpdateAppService extends Service implements NetInterface {
                     R.id.notify_updata_values_tv, UpdateAppService.this.getResources().getString(R.string.app_name) );
             manager.notify(100, notify);
         }
+        //多少是的
 
         File fileInstall = new File(FILE_NAME);
         downLoadSchedule(path, completeHandler, this,
