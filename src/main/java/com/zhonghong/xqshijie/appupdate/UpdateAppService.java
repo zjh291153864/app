@@ -185,6 +185,7 @@ public class UpdateAppService extends Service implements NetInterface {
             manager = (NotificationManager) this
                     .getSystemService((this.NOTIFICATION_SERVICE));
             notify = new Notification();
+
             notify.icon = R.drawable.ic_launcher;
             // 通知栏显示所用到的布局文件
             notify.contentView = new RemoteViews(this.getPackageName(),

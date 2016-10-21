@@ -19,6 +19,14 @@ public class SharedPreferencesUtil {
         return instance;
     }
 
+
+    public static SharedPreferencesUtil getInstance1(Context context) {
+        if (instance == null && context != null) {
+            instance = new SharedPreferencesUtil(context);
+        }
+        return instance;
+    }
+
     private SharedPreferencesUtil(Context context) {
         sp = context.getSharedPreferences(SHARED_PATH, Context.MODE_PRIVATE);
         editor = sp.edit();
@@ -40,11 +48,12 @@ public class SharedPreferencesUtil {
 
     /**
      * 指定默认值
+     *
      * @param key
      * @param defaultUrl
      * @return
      */
-    public String getStringValue(String key,String defaultUrl) {
+    public String getStringValue(String key, String defaultUrl) {
         if (key != null && !key.equals("")) {
             return sp.getString(key, defaultUrl);
         }
@@ -58,13 +67,13 @@ public class SharedPreferencesUtil {
         return 0;
     }
 
-    public int getIntValueByDefault(String key)
-    {
+    public int getIntValueByDefault(String key) {
         if (key != null && !key.equals("")) {
             return sp.getInt(key, 0);
         }
         return 0;
     }
+
     public boolean getBooleanValue(String key) {
         if (key != null && !key.equals("")) {
             return sp.getBoolean(key, false);

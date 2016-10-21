@@ -1,7 +1,6 @@
 package com.zhonghong.xqshijie.activity;
 
 import android.content.Intent;
-import android.os.CountDownTimer;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -23,9 +22,6 @@ import com.zhonghong.xqshijie.util.SharedPreferencesUtil;
 import com.zhonghong.xqshijie.util.StringUtils;
 import com.zhonghong.xqshijie.widget.TitleView;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 /**
  * 手机号页面
  * Created by jh on 2016/6/27.
@@ -43,7 +39,6 @@ public class PhoneActivity extends BaseActivity{
     private String mPhone;
     private LoginRegController mLoginRegController;
     private Intent intent;
-
     @Override
     public View initContentView() {
         View contentView = LayoutInflater.from(this).inflate(R.layout.activity_phone, null);
